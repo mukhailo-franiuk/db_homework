@@ -1,0 +1,29 @@
+.contain{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    .nav{
+        width: 20%;
+        position: relative;
+        height: 200px;
+        background-color: darkblue;
+        border-radius: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        button{
+            width: 60%;
+            margin: 20px 0;
+            border: 2px solid white;
+            border-radius: 6px;
+            padding: 10px 0;
+            background: darkblue;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .options-block{
+        width: 80%;
+    }
+}

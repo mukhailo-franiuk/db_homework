@@ -1,0 +1,39 @@
+
+nav{
+    width: 100%;
+    display: flex;
+    ul{
+        width: 30%;
+        display: flex;
+        list-style-type: none;
+        li {
+            margin: 25px 20px;
+            a{
+                display: block;
+                padding: 5px 20px;
+                border: 2px solid transparent;
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: 20px;
+                border-radius: 6px;
+                transition: border linear .4s;
+               &:hover {
+                border: 2px solid white;
+               }
+            }
+            .active {
+                border: 2px solid white;
+            }
+        }
+    }
+    h2{
+        display: block;
+        width: 70%;
+        text-align: right;
+        padding-right: 30px;
+        padding-top: 30px;
+        color: white;
+        font-family: sans-serif;
+    }
+}

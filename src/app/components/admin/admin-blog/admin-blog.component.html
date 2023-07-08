@@ -1,0 +1,45 @@
+<div class="contain">
+    <div class="options-top">
+        <div class="title">
+            <h3>Title</h3>
+            <input type="text" placeholder="Title here ..." [(ngModel)]="title">
+        </div>
+        <div class="post">
+            <h3>You post</h3>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Post here ..." [(ngModel)]="post"></textarea>
+        </div>
+        <div class="author">
+            <h3>Author</h3>
+            <input type="text" placeholder="Author name here ..." [(ngModel)]="author">
+        </div>
+        <button *ngIf="!editStatus" type="button" class="btn" title="added post" (click)="addPost()">Add</button>
+        <button *ngIf="editStatus" type="button" class="btn" title="added post" (click)="savePost()">Save</button>
+    </div>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Title</td>
+                <td>Post</td>
+                <td>Author</td>
+                <td>imagePath</td>
+                <td>Nav</td>
+            </tr>
+        </thead>
+        <hr>
+        <tbody>
+            <tr *ngFor="let posts of allPost">
+                <td>{{ posts.id }}</td>
+                <td>{{ posts.title }}</td>
+                <td>{{ posts.post }}</td>
+                <td>{{ posts.author }}</td>
+                <td><img [src]="posts.imagePath" alt=""></td>
+                <td>
+                    <button type="button" class="edit" (click)="editPost(posts)">edit</button>
+                    <button type="button" class="del" (click)="deleteDiscount(posts)">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
